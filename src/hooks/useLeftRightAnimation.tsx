@@ -5,7 +5,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const useLeftRightAnimation = () => {
-    const containerRef = useRef<HTMLDivElement | null>(null);
+    const containerRef = useRef<HTMLImageElement | null>(null);
 
     useEffect(() => {
         // ✅ Create GSAP context for scoped animations (modern React approach)
