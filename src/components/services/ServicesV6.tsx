@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
-
 "use client"
 import ServicesV6Data from '@/assets/jsonData/services/ServicesV6Data.json';
 import SingleServiceV6 from './SingleServiceV6';

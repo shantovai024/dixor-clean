@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
-
 "use client";
 import useHoverEffects from '@/hooks/useHoverEffects';
 import Image from 'next/image';
