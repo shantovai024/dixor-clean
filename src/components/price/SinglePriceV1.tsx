@@ -11,7 +11,7 @@ interface DataType {
 }
 
 interface PriceProps {
-    activeServiceId: any;
+    activeServiceId: number;
     plan: DataType
 }
 

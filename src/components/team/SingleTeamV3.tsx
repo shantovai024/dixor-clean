@@ -2,10 +2,10 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 interface DataType {
-    id?: number;
-    thumb?: string;
-    name?: string;
-    designation?: string;
+    id: number;
+    thumb: string;
+    name: string;
+    designation: string;
 }
 
 const SingleTeamV3 = ({ team }: { team: DataType }) => {

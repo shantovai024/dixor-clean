@@ -1,35 +1,38 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-// ✅ Register GSAP plugins
 gsap.registerPlugin(ScrollTrigger);
 
 const useHorizontalScroll = () => {
+    const animationRef = useRef<gsap.core.Tween | null>(null);
+
     useEffect(() => {
-        if (window.innerWidth > 1023) {
-            const sections = gsap.utils.toArray(".panel");
-            const container = document.querySelector(".thecontainer") as HTMLDivElement | null;
+        // ✅ Use matchMedia for better performance
+        const mm = gsap.matchMedia();
+
+        mm.add("(min-width: 1024px)", () => {
+            const sections = gsap.utils.toArray<HTMLElement>(".panel");
+            const container = document.querySelector<HTMLDivElement>(".thecontainer");
 
             if (container && sections.length > 0) {
-                const animation = gsap.to(sections, {
+                animationRef.current = gsap.to(sections, {
                     xPercent: -100 * (sections.length - 1),
                     ease: "none",
                     scrollTrigger: {
                         trigger: container,
                         pin: true,
                         scrub: 1,
-                        end: () => "+=" + container.offsetWidth,
+                        end: () => `+=${container.offsetWidth}`,
                     },
                 });
-
-                // ✅ Cleanup on unmount
-                return () => {
-                    animation.scrollTrigger?.kill();
-                    animation.kill();
-                };
             }
-        }
+        });
+
+        // ✅ Cleanup
+        return () => {
+            mm.revert(); // Cleans up all matchMedia animations
+        };
     }, []);
 };
 

@@ -3,14 +3,14 @@ import SocialShareV1 from "../social/SocialShareV1";
 import Link from "next/link";
 
 interface DataType {
-    id?: number;
-    thumb?: string;
-    name?: string;
-    designation?: string;
-    text?: string;
-    age?: string;
-    email?: string;
-    phone?: string;
+    id: number;
+    thumb: string;
+    name: string;
+    designation: string;
+    text: string;
+    age: string;
+    email: string;
+    phone: string;
 }
 
 interface TeamDetailsProps {

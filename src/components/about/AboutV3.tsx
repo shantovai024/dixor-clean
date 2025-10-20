@@ -24,11 +24,11 @@ const AboutV3 = ({ sectionClass }: DataType) => {
                         <div className="col-lg-5">
                             <div className="thumb-style-three">
                                 <Image src={thumb11} alt="Image Not Found" />
-                                <div className="upDownScrol scroll-shape" />
+                                <div className="upDownScrol scroll-shape" ref={containerRef} />
                             </div>
                         </div>
                         <div className="col-lg-6 offset-lg-1">
-                            <div className="about-style-three-info text-scroll-animation" ref={containerRef}>
+                            <div className="about-style-three-info text-scroll-animation" >
                                 <h2 className="title text">Boost the growth development agency your branding!</h2>
                                 <div className="d-flex mt-40">
                                     <div className="left">

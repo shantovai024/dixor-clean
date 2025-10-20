@@ -5,9 +5,9 @@ import HeaderNewsLetter from './HeaderNewsLetter';
 import logoLight from '@/assets/img/logo-light.png';
 
 interface SidebarInfoProps {
-    openInfoBar?: () => void;
-    isInfoOpen?: boolean;
-    closeInfoBar?: () => void;
+    openInfoBar: () => void;
+    isInfoOpen: boolean;
+    closeInfoBar: () => void;
 }
 
 const SidebarInfo = ({ openInfoBar, isInfoOpen, closeInfoBar }: SidebarInfoProps) => {

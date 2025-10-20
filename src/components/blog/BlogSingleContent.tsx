@@ -8,16 +8,16 @@ import SocialShareV3 from '../social/SocialShareV3';
 import BlogV3Data from "@/assets/jsonData/blog/BlogV3Data.json"
 
 interface DataType {
-    id?: number;
-    date?: string;
-    dateIcon?: string;
-    thumbFull?: string;
-    author?: string;
+    id: number;
+    date: string;
+    dateIcon: string;
+    thumbFull: string;
+    author: string;
 }
 
 interface BlogSingleProps {
-    blogInfo?: DataType;
-    totalBlogs?: number;
+    blogInfo: DataType;
+    totalBlogs: number;
     sectionClass?: string;
 }
 

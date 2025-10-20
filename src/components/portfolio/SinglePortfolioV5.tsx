@@ -4,10 +4,10 @@ import Image from "next/image";
 import Link from "next/link";
 
 interface DataType {
-    id?: number;
-    thumb?: string;
-    title?: string;
-    tag?: string;
+    id: number;
+    thumb: string;
+    title: string;
+    tag: string;
 }
 
 const SinglePortfolioV5 = ({ portfolio }: { portfolio: DataType }) => {

@@ -1,8 +1,8 @@
 import Link from 'next/link';
 
 interface DataType {
-    toggleSubMenu2?: (event: React.MouseEvent<HTMLAnchorElement>) => void;
-    closeInfoBar?: () => void;
+    toggleSubMenu2: (event: React.MouseEvent<HTMLAnchorElement>) => void;
+    closeInfoBar: () => void;
 }
 
 const MainMenuV2 = ({ toggleSubMenu2, closeInfoBar }: DataType) => {

@@ -15,16 +15,16 @@ import FollowWidget from '../widgets/FollowWidget';
 import TagsWidget from '../widgets/TagsWidget';
 
 interface DataType {
-    id?: number;
-    date?: string;
-    dateIcon?: string;
-    thumbFull?: string;
-    author?: string;
+    id: number;
+    date: string;
+    dateIcon: string;
+    thumbFull: string;
+    author: string;
 }
 
 interface BlogSingleProps {
-    blogInfo?: DataType;
-    totalBlogs?: number;
+    blogInfo: DataType;
+    totalBlogs: number;
     sectionClass?: string;
 }
 

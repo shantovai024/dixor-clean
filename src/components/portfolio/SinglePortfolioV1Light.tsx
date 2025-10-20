@@ -2,10 +2,10 @@ import Image from "next/image";
 import Link from "next/link";
 
 interface DataType {
-    id?: number;
-    thumbLight?: string;
-    text?: string;
-    textBold?: string;
+    id: number;
+    thumbLight: string;
+    text: string;
+    textBold: string;
 }
 
 const SinglePortfolioV1Light = ({ portfolio }: { portfolio: DataType }) => {

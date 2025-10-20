@@ -1,43 +1,45 @@
-import { useEffect } from "react";
+"use client"
+import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const useItemMoveTopEffect = () => {
+    const containerRef = useRef<HTMLDivElement>(null);
+
     useEffect(() => {
-        const itemMoveTop = document.querySelector(".item-move-top-items");
-        if (!itemMoveTop) return;
+        const container = containerRef.current;
+        if (!container) return;
+
+        const items = container.querySelectorAll<HTMLElement>(".item-move-top-item");
+        if (items.length === 0) return;
+
+        const pbmitHeight = items[0].offsetHeight + 120;
+        const spacer = 0;
 
         ScrollTrigger.matchMedia({
             "(min-width: 992px)": () => {
-                const pbmitpanels = gsap.utils.toArray<HTMLElement>(".item-move-top-item");
-                const spacer = 0;
+                items.forEach((item, i) => {
+                    gsap.set(item, { top: i * 0 });
 
-                if (pbmitpanels.length === 0) return;
-
-                const pbmitheight = pbmitpanels[0].offsetHeight + 120;
-
-                pbmitpanels.forEach((pbmitpanel, i) => {
-                    gsap.set(pbmitpanel, { top: i * 0 });
-
-                    gsap.to(pbmitpanel, {
+                    gsap.to(item, {
                         scrollTrigger: {
-                            trigger: pbmitpanel,
+                            trigger: item,
                             start: "top bottom-=100",
                             end: "top top+=0",
                             scrub: true,
                             invalidateOnRefresh: true,
                         },
                         ease: "none",
-                        scale: () => 1 - (pbmitpanels.length - i) * 0.0,
+                        scale: () => 1 - (items.length - i) * 0.0,
                     });
 
                     ScrollTrigger.create({
-                        trigger: pbmitpanel,
+                        trigger: item,
                         start: "top 140px",
-                        endTrigger: ".item-move-top-items",
-                        end: `bottom top+=${pbmitheight + pbmitpanels.length * spacer}`,
+                        endTrigger: container,
+                        end: `bottom top+=${pbmitHeight + items.length * spacer}`,
                         pin: true,
                         pinSpacing: false,
                     });
@@ -52,6 +54,8 @@ const useItemMoveTopEffect = () => {
             ScrollTrigger.getAll().forEach(trigger => trigger.kill(true));
         };
     }, []);
+
+    return containerRef;
 };
 
 export default useItemMoveTopEffect;

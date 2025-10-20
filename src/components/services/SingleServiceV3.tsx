@@ -2,13 +2,13 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 interface DataType {
-    id?: number;
-    icon?: string;
-    iconLight?: string;
-    titleFirst?: string;
-    titleLast?: string;
-    text?: string;
-    number?: string;
+    id: number;
+    icon: string;
+    iconLight: string;
+    titleFirst: string;
+    titleLast: string;
+    text: string;
+    number: string;
 }
 
 const SingleServiceV3 = ({ service }: { service: DataType }) => {

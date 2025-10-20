@@ -2,11 +2,11 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 interface DataType {
-    id?: number;
-    thumb?: string;
-    title2?: string;
-    date?: string;
-    author?: string;
+    id: number;
+    thumb: string;
+    title2: string;
+    date: string;
+    author: string;
 }
 
 const SingleBlog3Column = ({ blog }: { blog: DataType }) => {

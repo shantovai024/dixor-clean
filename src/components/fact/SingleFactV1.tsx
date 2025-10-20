@@ -2,10 +2,10 @@ import Counter from "../counter/Counter";
 
 interface DataType {
     count: number;
-    suffix?: string;
-    label?: string;
-    duration?: string;
-    animation?: string
+    suffix: string;
+    label: string;
+    duration: string;
+    animation: string
 }
 
 const SingleFactV1 = ({ fact }: { fact: DataType }) => {

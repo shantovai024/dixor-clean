@@ -9,7 +9,7 @@ import useItemMoveTopEffect from '@/hooks/useItemMoveTopEffect';
 
 const ServicesV6 = () => {
 
-    useItemMoveTopEffect();
+    const containerRef = useItemMoveTopEffect();
 
     return (
         <>
@@ -31,7 +31,7 @@ const ServicesV6 = () => {
                         </div>
 
                         <div className="col-xl-6 offset-xl-1 col-lg-7">
-                            <div className="service-style-six-items item-move-top-items">
+                            <div className="service-style-six-items item-move-top-items" ref={containerRef}>
                                 <ul>
                                     {ServicesV6Data.map(service =>
                                         <SingleServiceV6 service={service} key={service.id} />

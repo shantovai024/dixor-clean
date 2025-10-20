@@ -1,7 +1,7 @@
 interface DataType {
-    name?: string;
-    designation?: string;
-    quote?: string;
+    name: string;
+    designation: string;
+    quote: string;
 }
 
 const SingleTestimonialV2 = ({ testimonial }: { testimonial: DataType }) => {

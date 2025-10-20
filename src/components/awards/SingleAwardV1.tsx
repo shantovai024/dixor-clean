@@ -1,9 +1,8 @@
 interface DataType {
-    id?: number;
-    title?: string;
-    icon?: string;
-    year?: number;
-    delay?: string;
+    title: string;
+    icon: string;
+    year: number;
+    delay: string;
 }
 
 const SingleAwardV1 = ({ item }: { item: DataType }) => {

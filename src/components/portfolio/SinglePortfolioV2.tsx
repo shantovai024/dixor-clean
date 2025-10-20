@@ -4,11 +4,11 @@ import Link from "next/link";
 import useLeftRightAnimation from "@/hooks/useLeftRightAnimation";
 
 interface DataType {
-    id?: number;
-    thumb?: string;
-    tag?: string;
-    date?: string;
-    text?: string;
+    id: number;
+    thumb: string;
+    tag: string;
+    date: string;
+    text: string;
 }
 
 const SinglePortfolioV2 = ({ portfolio }: { portfolio: DataType }) => {

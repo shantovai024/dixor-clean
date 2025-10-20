@@ -1,5 +1,3 @@
-"use client"
-
 interface DataType {
     sectionClass?: string
 }

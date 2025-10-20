@@ -7,16 +7,16 @@ import portfolio44 from "@/assets/img/portfolio/44.jpg"
 import PortfolioV4Data from "@/assets/jsonData/portfolio/PortfolioV4Data.json";
 
 interface DataType {
-    id?: number;
-    title?: string;
-    tag?: string;
-    thumbFull?: string;
+    id: number;
+    title: string;
+    tag: string;
+    thumbFull: string;
 }
 
 interface ProjectDetailsProps {
-    projectInfo?: DataType;
+    projectInfo: DataType;
     sectionClass?: string;
-    totalProjects?: number
+    totalProjects: number
 }
 
 const ProjectDetailsContent = ({ projectInfo, sectionClass, totalProjects }: ProjectDetailsProps) => {

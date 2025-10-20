@@ -2,12 +2,12 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 interface DataType {
-    id?: number;
-    thumb?: string;
-    date?: string;
-    title?: string;
-    text?: string;
-    author?: string;
+    id: number;
+    thumb: string;
+    date: string;
+    title: string;
+    text: string;
+    author: string;
 }
 
 const SingleBlogStandard = ({ blog }: { blog: DataType }) => {

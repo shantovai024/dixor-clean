@@ -2,12 +2,12 @@ import Image from 'next/image';
 import RatingsStar from '../utilities/RatingsStar';
 
 interface DataType {
-    id?: number;
-    ratings?: any;
-    text?: string;
-    avatar?: string;
-    name?: string;
-    designation?: string;
+    id: number;
+    ratings: number;
+    text: string;
+    avatar: string;
+    name: string;
+    designation: string;
 }
 
 const SingleTestimonialV3 = ({ testimonial }: { testimonial: DataType }) => {

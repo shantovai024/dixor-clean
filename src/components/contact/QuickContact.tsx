@@ -5,8 +5,8 @@ import SplitTextV2 from "../../components/animation/SplitTextV2.jsx"
 
 interface DataType {
     sectionClass?: string;
-    title?: string;
-    titleBold?: string
+    title: string;
+    titleBold: string
 }
 
 const QuickContact = ({ sectionClass, title, titleBold }: DataType) => {

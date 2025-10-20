@@ -28,7 +28,7 @@ const BlogStandardContent = ({ sectionClass }: DataType) => {
     const endIndex = startIndex + itemsPerPage;
     const currentBlogData = BlogData.slice(startIndex, endIndex);
 
-    const handlePageClick = (data: any) => {
+     const handlePageClick = (data: { selected: number }) => {
         const selectedPage = data.selected + 1;
         setCurrentPage(selectedPage);
 

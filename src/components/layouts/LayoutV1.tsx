@@ -2,7 +2,7 @@ import FooterV4 from "../footer/FooterV4";
 import HeaderV7 from "../header/HeaderV7";
 
 interface LayoutProps {
-    children?: React.ReactNode;
+    children: React.ReactNode;
 }
 
 const LayoutV1 = ({ children }: LayoutProps) => {

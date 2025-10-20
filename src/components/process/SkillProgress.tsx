@@ -2,8 +2,8 @@
 import { useState, useEffect, useRef } from 'react';
 
 interface DataType {
-  title?: string;
-  end?: number | undefined;
+  title: string;
+  end: number | undefined;
 }
 
 const SkillProgress = ({ skill }: { skill: DataType }) => {

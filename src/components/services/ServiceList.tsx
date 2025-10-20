@@ -1,7 +1,7 @@
 interface DataType {
-    id?: number;
-    serviceName?: string;
-    count?: string;
+    id: number;
+    serviceName: string;
+    count: string;
 }
 
 const ServiceList = ({ service }: { service: DataType }) => {

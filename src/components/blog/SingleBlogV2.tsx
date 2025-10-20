@@ -2,17 +2,17 @@ import Image from "next/image";
 import Link from "next/link";
 
 interface DataType {
-    id?: number;
-    thumb?: string;
-    author?: string;
-    comment?: number;
-    date?: string;
-    month?: string;
-    title?: string;
+    id: number;
+    thumb: string;
+    author: string;
+    date: string;
+    comments: number;
+    month: string;
+    title: string;
 }
 
 const SingleBlogV2 = ({ blog }: { blog: DataType }) => {
-    const { id, thumb, author, comment, title, date, month } = blog
+    const { id, thumb, author, comments, title, date, month } = blog
 
     return (
         <>
@@ -31,7 +31,7 @@ const SingleBlogV2 = ({ blog }: { blog: DataType }) => {
                                     <Link href="#" scroll={false}>{author}</Link>
                                 </li>
                                 <li>
-                                    <Link href="#">{comment} Comments</Link>
+                                    <Link href="#">{comments} Comments</Link>
                                 </li>
                             </ul>
                         </div>

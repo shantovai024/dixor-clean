@@ -28,7 +28,7 @@ const Blog3ColumnContent = ({ sectionClass }: DataType) => {
     const endIndex = startIndex + itemsPerPage;
     const currentBlogData = BlogV3Data.slice(startIndex, endIndex);
 
-    const handlePageClick = (data: any) => {
+     const handlePageClick = (data: { selected: number }) => {
         const selectedPage = data.selected + 1;
         setCurrentPage(selectedPage);
 

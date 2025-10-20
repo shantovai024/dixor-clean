@@ -1,10 +1,10 @@
 import Image from 'next/image';
 
 interface DataType {
-    id?: number;
-    category?: string;
-    thumb?: string;
-    website?: string;
+    id: number;
+    category: string;
+    thumb: string;
+    website: string;
 }
 
 const SinglePartnerV2 = ({ partner }: { partner: DataType }) => {

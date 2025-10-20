@@ -1,13 +1,12 @@
-"use client"
 import Image from "next/image";
 import SocialShareV1 from "../social/SocialShareV1";
 import Link from "next/link";
 
 interface DataType {
-    id?: number;
-    thumb?: string;
-    name?: string;
-    designation?: string;
+    id: number;
+    thumb: string;
+    name: string;
+    designation: string;
 }
 
 const SingleTeamV1 = ({ team }: { team: DataType }) => {

@@ -8,7 +8,7 @@ declare class SplitText {
       linesClass?: string;
       wordsClass?: string;
       charsClass?: string;
-      [key: string]: any;
+      [key: string]: string;
     }
   );
   words: HTMLElement[];

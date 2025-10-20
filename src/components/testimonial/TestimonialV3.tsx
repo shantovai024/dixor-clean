@@ -5,17 +5,23 @@ import Image from "next/image";
 import TestimonialV3Data from "@/assets/jsonData/testimonial/TestimonialV3Data.json"
 import shape14 from "@/assets/img/shape/14.png";
 import SingleTestimonialV3 from "./SingleTestimonialV3";
+import { useRef } from 'react';
+import useUpDownScroll from '@/hooks/useUpDownScroll';
 
 interface DataType {
     sectionClass?: string
 }
 
 const TestimonialV3 = ({ sectionClass }: DataType) => {
+
+    const shapeRef = useRef<HTMLImageElement>(null!);
+    useUpDownScroll(shapeRef);
+
     return (
         <>
             <div className={`testimonial-style-three-area default-padding ${sectionClass ? sectionClass : ""}`}>
                 <div className="shape-style-one">
-                    <Image className="upDownScrol" src={shape14} alt="Image Not Found" />
+                    <Image className="upDownScrol" src={shape14} alt="Image Not Found" ref={shapeRef} />
                 </div>
                 <div className="container">
                     <div className="testimonial-heading">

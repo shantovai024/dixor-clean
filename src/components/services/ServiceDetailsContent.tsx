@@ -6,11 +6,11 @@ import ServicesV1Data from "@/assets/jsonData/services/ServicesV1Data.json"
 import Link from "next/link";
 
 interface DataType {
-    title?: string;
+    title: string;
 }
 
 interface ServiceDetailsProps {
-    serviceInfo?: DataType;
+    serviceInfo: DataType;
     sectionClass?: string;
 }
 

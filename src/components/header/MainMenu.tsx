@@ -4,8 +4,8 @@ import { useState } from "react";
 import ModalVideo from "react-modal-video";
 
 interface DataType {
-    navbarPlacement?: string;
-    toggleSubMenu?: (event: React.MouseEvent<HTMLAnchorElement>) => void;
+    navbarPlacement: string;
+    toggleSubMenu: (event: React.MouseEvent<HTMLAnchorElement>) => void;
 }
 
 const MainMenu = ({ navbarPlacement, toggleSubMenu }: DataType) => {

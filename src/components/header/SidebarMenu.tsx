@@ -8,10 +8,10 @@ import HeaderNewsLetter from './HeaderNewsLetter';
 import useSubMenuToggleV2 from '@/hooks/useSubMenuToggleV2';
 
 interface DataType {
-    openMenu?: () => void;
-    isInfoOpen?: boolean;
-    openInfoBar?: () => void;
-    closeInfoBar?: () => void;
+    openMenu: () => void;
+    isInfoOpen: boolean;
+    openInfoBar: () => void;
+    closeInfoBar: () => void;
 }
 
 const SidebarMenu = ({ isInfoOpen, closeInfoBar, openInfoBar }: DataType) => {

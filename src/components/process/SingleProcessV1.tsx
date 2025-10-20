@@ -1,10 +1,10 @@
 import Image from "next/image";
 
 interface DataType {
-    title?: string;
-    thumb?: string;
-    thumbLight?: string;
-    text?: string;
+    title: string;
+    thumb: string;
+    thumbLight: string;
+    text: string;
 }
 
 const SingleProcessV1 = ({ process }: { process: DataType }) => {
