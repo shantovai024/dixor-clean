@@ -3,21 +3,35 @@ import thumb4 from '@/assets/img/thumb/4.jpg';
 import thumb13 from '@/assets/img/thumb/13.jpg';
 import Image from 'next/image';
 import Counter from '../counter/Counter';
+import { useEffect, useRef } from 'react';
 
 const BannerV10 = () => {
 
-    const isClient = typeof window !== "undefined";
+    const videoRef = useRef<HTMLVideoElement>(null);
+
+    useEffect(() => {
+        // Ensure video plays after hydration
+        if (videoRef.current) {
+            videoRef.current.play().catch(err => {
+                console.log('Video autoplay failed:', err);
+            });
+        }
+    }, []);
 
     return (
         <>
             <div className="banner-style-ten-area shadow dark-hard">
 
                 {/* Background Video */}
-                {isClient && (
-                    <video loop muted autoPlay>
-                        <source src="/assets/video/abstract.mp4" type="video/mp4" />
-                    </video>
-                )}
+                <video
+                    ref={videoRef}
+                    loop
+                    muted
+                    playsInline
+                    suppressHydrationWarning
+                >
+                    <source src="/assets/video/abstract.mp4" type="video/mp4" />
+                </video>
 
                 <div className="light-banner-active bg-gray bg-cover" style={{ backgroundImage: 'url(/assets/img/shape/7.jpg)' }} />
 

@@ -18,7 +18,7 @@ const HeaderNewsLetter = () => {
         <>
             <form onSubmit={handleForm}>
                 <div className="input-group stylish-input-group">
-                    <input type="email" placeholder="Enter your e-mail" className="form-control" name="email" />
+                    <input type="email" placeholder="Enter your e-mail" className="form-control" name="email" autoComplete='off' />
                     <span className="input-group-addon">
                         <button type="submit">
                             <i className="fas fa-arrow-right" />
