@@ -25,7 +25,7 @@ const BlogSingleWithSidebarPage = async ({ params }: PageProps) => {
     return (
         <>
             <LayoutV1>
-                <Breadcrumb title='Blog Grid' breadCrumb='blog-single-with-sidebar' />
+                <Breadcrumb title='Blog Single' breadCrumb='blog-single-with-sidebar' />
                 {data && <BlogSingleWithSidebarContent sectionClass='default-padding-bottom' blogInfo={data} totalBlogs={BlogV3Data.length} />}
                 <DarkClass />
                 <ThemeDark />
